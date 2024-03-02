@@ -1,0 +1,13 @@
+{
+  "menu": ["mi trabajo", "sobre mi", "Servicios"],
+  "hero": {
+    "h1": "¡Hey hola! Gracias por estar aquí y  ser el visitante numero 12",
+    "p": "Soy Grey, desarrollador web. ¿Te gustaría trabajar juntos?",
+    "btn": "Hablemos de tu proyecto"
+  }, 
+  "work": {
+    "title": "Mi trabajo",
+    "projects": ["Generador de Sombras", "Generador de Tablas ", "YumYumYes"],
+    "btn": "Ver más trabajos"
+  }
+}
