@@ -10,7 +10,7 @@ export const HeroSection = () => {
         <div className=" w-full md:w-[45%] md:top-[15px]  flex justify-center    ">
           <img
             src={heroImg}
-            className="w-full max-w-[400px] md:max-h-[292px]  "
+            className="w-full max-w-[400px] md:max-h-[292px]   "
             alt="developer writing code"
           />
         </div>
@@ -22,7 +22,7 @@ export const HeroSection = () => {
           <p className="text-black dark:text-white  font-medium">
             {t("hero.p")}
           </p>
-          <button className="w-full h-12 bg-black dark:bg-white dark:text-black max-w-[320px]  text-white rounded-3xl text-base px-5 font-bold">
+          <button className="w-full h-12 hover:scale-105 transition-all bg-black dark:bg-white dark:text-black max-w-[320px]  text-white rounded-3xl text-base px-5 font-bold">
             {t("hero.btn").toUpperCase()}
           </button>
         </div>

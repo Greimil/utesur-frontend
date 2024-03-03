@@ -4,10 +4,23 @@
     "h1": "Hey there! Thanks for being here and being visitor number 12",
     "p": "I'm Grey, a web developer. Would you like to work together?",
     "btn": "Let's talk about your project"
-  }, 
+  },
   "work": {
     "title": "My work",
     "projects": ["Shadow Generator", "Table Generator", "YumYumYes"],
     "btn": "See more Projects"
+  },
+  "about": {
+    "subtitle": "Frontend Developer",
+    "btn": "Download CV",
+    "title": "About me",
+    "p": "I'm a Frontend developer with three years of self-taught programming experience. Currently in my second year of Computer Science studies, I'm passionate about contributing to open-source projects like Chingu. Collaborating with developers worldwide through Chingu has enriched my experience, working on various projects.",
+    "tec": {
+      "title": "Technologies"
+    }
+  }, "contact": {
+    "h2": "Do you have a project in mind? Get in touch, and we'll have a coffe",
+    "btn": "Let's go for coffe",
+    "placeholder1": "Enter your email address here"
   }
 }

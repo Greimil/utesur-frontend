@@ -4,10 +4,24 @@
     "h1": "¡Hey hola! Gracias por estar aquí y  ser el visitante numero 12",
     "p": "Soy Grey, desarrollador web. ¿Te gustaría trabajar juntos?",
     "btn": "Hablemos de tu proyecto"
-  }, 
+  },
   "work": {
     "title": "Mi trabajo",
     "projects": ["Generador de Sombras", "Generador de Tablas ", "YumYumYes"],
     "btn": "Ver más trabajos"
+  },
+  "about": {
+    "subtitle": "Desarrollador Frontend",
+    "btn": "Descargar CV",
+    "title": "Sobre mi",
+    "p": "Soy un desarrollador Frontend con tres años de experiencia autodidacta en programación. Actualmente en mi segundo año de licenciatura en Informática, me apasiona contribuir a proyectos de código abierto como Chingu. Colaborar con otros  desarrolladores a traves de Chingu de todo el mundo ha enriquecido mi experiencia, trabajando en diversos proyectos.",
+    "tec": {
+      "title": "Tecnologías"
+    }
+  },
+  "contact": {
+    "h2": "¿Tienes un proyecto en mente? Contáctame y nos tomamos un cafe",
+    "btn": "Ir a tomar cafe", 
+    "placeholder1": "Escribe aquí tu correo electrónico"
   }
 }

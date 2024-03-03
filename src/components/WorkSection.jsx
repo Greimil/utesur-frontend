@@ -18,10 +18,10 @@ export const WorkSection = () => {
         }
       >
         <div className="col-start-1   md:max-w-[300px]">
-          <Card src={ShadowShot} proName={t("work.projects.0")} />
+          <Card src={ShadowShot} proName={t("work.projects.0")} link="https://devex.tools/shadows" />
         </div>
         <div className="col-start-2   md:max-w-[300px]">
-          <Card src={tableShot} proName={t("work.projects.1")} />
+          <Card src={tableShot} proName={t("work.projects.1")} link="https://devex.tools/tables" />
         </div>
 
         <div className="col-start-1 row-start-2 col-span-2 sm:col-span-1 sm:col-start-3 sm:row-start-1 ">
@@ -29,17 +29,19 @@ export const WorkSection = () => {
             src={yumyumyesShot}
             proName={t("work.projects.2")}
             className="hidden sm:block"
+            link="https://yumyumyes.com/"
           />
           <CardLg
             src={yumyumyesShot16}
             proName={t("work.projects.2")}
             className="sm:hidden"
+            link="https://yumyumyes.com/"
           />
         </div>
       </div>
 
       <div className="py-3"> 
-        <button className="bg-[#EDEDED] dark:bg-[#333333] w-full max-w-44 h-12 rounded-3xl dark:text-white font-bold " >{t("work.btn")}</button>
+        <button className="bg-[#EDEDED] hover:scale-105 transition-all dark:bg-[#333333] w-full max-w-44 h-12 rounded-3xl dark:text-white font-bold " >{t("work.btn")}</button>
       </div>
     </Section>
   );
@@ -47,8 +49,8 @@ export const WorkSection = () => {
 
 const Card = ({ link, proName, src, className }) => {
   return (
-    <button
-      className={`hover:scale-105 transition-all duration-200  ${className}`}
+    <a href={link} target="_blank"
+      className={`hover:scale-105 transition-all duration-200 block ${className}`}
     >
       <img
         src={src}
@@ -56,10 +58,10 @@ const Card = ({ link, proName, src, className }) => {
         alt={`project ${proName}`}
       />
 
-      <caption className=" block  dark:text-white  text-start my-3 font-medium text-base leading-6">
+      <div className=" block  dark:text-white  text-start my-3 font-medium text-base leading-6">
         {proName}
-      </caption>
-    </button>
+      </div>
+    </a>
   );
 };
 
@@ -74,9 +76,9 @@ const CardLg = ({ link, proName, src, className }) => {
         alt={`project ${proName}`}
       />
 
-      <caption className=" block  dark:text-white  text-start my-3 font-medium text-base leading-6">
+      <div className=" block  dark:text-white  text-start my-3 font-medium text-base leading-6">
         {proName}
-      </caption>
+      </div>
     </button>
   );
 };

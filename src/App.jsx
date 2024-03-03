@@ -3,6 +3,8 @@ import { Menu } from "./components/Menu";
 import { useState } from "react";
 import { HeroSection } from "./components/HeroSection";
 import { WorkSection } from "./components/WorkSection";
+import { AboutMe } from "./components/AboutMe";
+import { Contact } from "./components/Contact";
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -17,6 +19,8 @@ const App = () => {
       <Container>
           <HeroSection/>
           <WorkSection/>
+          <AboutMe theme={theme} />
+          <Contact/>
       </Container>
     </main>
   );

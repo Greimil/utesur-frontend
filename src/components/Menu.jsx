@@ -156,21 +156,21 @@ export const Menu = ({ theme, setTheme }) => {
               <ul className="flex flex-1 flex-col   ">
                 <li className="hover:bg-primaryBlue `  font-semibold rounded-sm h-14 flex items-center px-7">
                   <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3   ">
+                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white ">
                     {t("menu.0").toLocaleUpperCase()}
                     </Link>
                   </button>
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
                   <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3   ">
+                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white  ">
                     {t("menu.1").toLocaleUpperCase()}
                     </Link>
                   </button>
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
                   <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3   ">
+                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white  ">
                     {t("menu.2").toLocaleUpperCase()}
                     </Link>
                   </button>
