@@ -5,6 +5,8 @@ import { HeroSection } from "./components/HeroSection";
 import { WorkSection } from "./components/WorkSection";
 import { AboutMe } from "./components/AboutMe";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
+import { useRef } from "react";
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -13,15 +15,28 @@ const App = () => {
       : "light";
   });
 
+  const heroRef = useRef(null);
+  const workRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <main className="flex text-sm  items-center flex-col  justify-center font-abc dark:bg-[#222121] ">
-      <Menu theme={theme} setTheme={setTheme} />
+      <Menu
+        heroRef={heroRef}
+        workRef={workRef}
+        aboutRef={aboutRef}
+        contactRef={contactRef}
+        theme={theme}
+        setTheme={setTheme}
+      />
       <Container>
-          <HeroSection/>
-          <WorkSection/>
-          <AboutMe theme={theme} />
-          <Contact/>
+        <HeroSection contactRef={contactRef} ref={heroRef} />
+        <WorkSection ref={workRef} />
+        <AboutMe ref={aboutRef} theme={theme} />
+        <Contact ref={contactRef} />
       </Container>
+      <Footer theme={theme} />
     </main>
   );
 };

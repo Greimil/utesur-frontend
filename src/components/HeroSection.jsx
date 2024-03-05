@@ -1,12 +1,17 @@
 import { useTranslation } from "react-i18next";
 import heroImg from "../assets/heroImg.png";
 import { Section } from "./wrappers/Section";
-export const HeroSection = () => {
+import { forwardRef } from "react";
+
+export const HeroSection = forwardRef(({ contactRef }, ref) => {
   const { t } = useTranslation();
 
   return (
-    <Section className="w-full mt-8 mb-6 md:mt-5  ">
-      <div className="flex flex-col md:max-h-[372px] md:flex-row items-center gap-3 md:py-10 ">
+    <Section id={ref} className="w-full mt-8 mb-6 md:mt-5  ">
+      <div
+        id="heroSection"
+        className="flex flex-col md:max-h-[372px] md:flex-row items-center gap-3 md:py-10 "
+      >
         <div className=" w-full md:w-[45%] md:top-[15px]  flex justify-center    ">
           <img
             src={heroImg}
@@ -22,11 +27,18 @@ export const HeroSection = () => {
           <p className="text-black dark:text-white  font-medium">
             {t("hero.p")}
           </p>
-          <button className="w-full h-12 hover:scale-105 transition-all bg-black dark:bg-white dark:text-black max-w-[320px]  text-white rounded-3xl text-base px-5 font-bold">
+          <button
+            onClick={() =>
+              contactRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+            className="w-full h-12 hover:scale-105 transition-all bg-black dark:bg-white dark:text-black max-w-[320px]  text-white rounded-3xl text-base px-5 font-bold"
+          >
             {t("hero.btn").toUpperCase()}
           </button>
         </div>
       </div>
     </Section>
   );
-};
+});
+
+HeroSection.displayName = "HeroSection";

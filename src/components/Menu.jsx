@@ -1,30 +1,32 @@
-
-import { useState } from "react";
 import { Link } from "react-scroll";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
 import WorldIcon from "./icons/WorldIcon";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n/i18n";
 
-export const Menu = ({ theme, setTheme }) => {
-  let prevLanguage = navigator.language || navigator.userLanguage
-  prevLanguage = prevLanguage.substring(0,2);
+export const Menu = ({
+  theme,
+  setTheme,
+  heroRef,
+  workRef,
+  aboutRef,
+  contactRef,
+}) => {
+  let prevLanguage = navigator.language || navigator.userLanguage;
+  prevLanguage = prevLanguage.substring(0, 2);
 
   const [language, setlanguage] = useState(prevLanguage);
-  
-  
+
   const handleLanguageChange = () => {
     if (language === "en") {
-      i18n.changeLanguage("es")
-      setlanguage("es")
+      i18n.changeLanguage("es");
+      setlanguage("es");
     } else {
-      i18n.changeLanguage("en")
-      setlanguage("en")
+      i18n.changeLanguage("en");
+      setlanguage("en");
     }
-    
-    // i18n.changeLanguage(language === "en" ? "es" setlanguage() : "en");
   };
 
   const { t } = useTranslation();
@@ -69,22 +71,21 @@ export const Menu = ({ theme, setTheme }) => {
     };
   }, [menuOpen]);
 
-  
   return (
     <div className="relative text-base font-medium text-black dark:text-white  w-full border-b border-solid border-[#E5E8EB] max-h-[65px]">
       <div className="relative flex justify-center  ">
         {/* Barra superior con logo */}
         <div className="flex justify-between p-[12.5px] w-full items-center max-w-[1168px]    ">
           <div className="flex gap-6">
-            {/* Icono del menú */}  
+            {/* Icono del menú */}
             <div className="md:hidden" ref={buttonRef}>
               <button onClick={toggleMenu} className="focus:outline-none">
                 <svg
                   className="size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
-                  fill={theme === "light"? "black" : "white"}
-                  style={{transition: "normal"}}
+                  fill={theme === "light" ? "black" : "white"}
+                  style={{ transition: "normal" }}
                 >
                   {/* Icono del menú (puedes cambiarlo por el de tu preferencia) */}
                   {menuOpen ? (
@@ -106,37 +107,51 @@ export const Menu = ({ theme, setTheme }) => {
 
             <Link to="/" className="flex items-center text-[18px]">
               <button className="p-1">
-                <strong className="text-black dark:text-white" > &lt;GreyDev/&gt; </strong>
+                <strong className="text-black dark:text-white">
+                  {" "}
+                  &lt;GreyDev/&gt;{" "}
+                </strong>
               </button>
             </Link>
           </div>
           {/* Enlaces para la versión de escritorio */}
           <div className="hidden md:flex items-center justify-end  flex-1     ">
-            <button className="hover:font-semibold ">
-              <Link to="/contactos" className=" text-black dark:text-white   px-3">
-                {t("menu.0").toLocaleUpperCase()}
-              </Link>
+            <button
+              className="hover:font-semibold px-3 text-black dark:text-white"
+              onClick={() =>
+                workRef.current.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {t("menu.0").toLocaleUpperCase()}
             </button>
-            <button className="hover:font-semibold">
-              <Link
-                to="https://login.live.com/"
-                target="_blank"
-                className=" text-black dark:text-white  px-3"
-              >
-                {t("menu.1").toLocaleUpperCase()}
-              </Link>
+            <button
+              className="hover:font-semibold px-3 text-black dark:text-white"
+              onClick={() =>
+                aboutRef.current.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {t("menu.1").toLocaleUpperCase()}
             </button>
-            <button  className="hover:font-semibold">
-              <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white   ">
-                {t("menu.2").toLocaleUpperCase()}
-              </Link>
+            <button
+              className="hover:font-semibold  px-3 text-black dark:text-white"
+              onClick={() =>
+                contactRef.current.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {t("menu.2").toLocaleUpperCase()}
             </button>
           </div>
 
           <div className="flex gap-x-2 ">
-            <button onClick={handleLanguageChange} className="size-10 bg-[#EDEDED] dark:bg-[#333333] text-black dark:text-white flex items-center justify-center rounded-full ">
-              {theme === "light" ? <WorldIcon color={"black"} hidden={theme === "dark"} /> : <WorldIcon color={"white"} hidden={theme === "light"} />}
-              
+            <button
+              onClick={handleLanguageChange}
+              className="size-10 bg-[#EDEDED] dark:bg-[#333333] text-black dark:text-white flex items-center justify-center rounded-full "
+            >
+              {theme === "light" ? (
+                <WorldIcon color={"black"} hidden={theme === "dark"} />
+              ) : (
+                <WorldIcon color={"white"} hidden={theme === "light"} />
+              )}
             </button>
             <button
               onClick={handleTheme}
@@ -152,39 +167,46 @@ export const Menu = ({ theme, setTheme }) => {
             <div
               ref={menuRef}
               className="absolute flex flex-col top-0 left-0-0 h-full w-64 bg-white dark:bg-[#222121] shadow"
->
+            >
               <ul className="flex flex-1 flex-col   ">
                 <li className="hover:bg-primaryBlue `  font-semibold rounded-sm h-14 flex items-center px-7">
-                  <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white ">
+                  <button
+                    className="hover:font-semibold px-3 text-black dark:text-white"
+                    onClick={() =>
+                      workRef.current.scrollIntoView({ behavior: "smooth" })
+                    }
+                  >
                     {t("menu.0").toLocaleUpperCase()}
-                    </Link>
                   </button>
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
-                  <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white  ">
+                  <button
+                    className="hover:font-semibold px-3 text-black dark:text-white"
+                    onClick={() =>
+                      aboutRef.current.scrollIntoView({ behavior: "smooth" })
+                    }
+                  >
                     {t("menu.1").toLocaleUpperCase()}
-                    </Link>
                   </button>
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
-                  <button className="hover:font-semibold">
-                    <Link to="/buzon-sugerencias" className="px-3 text-black dark:text-white  ">
+                  <button
+                    className="hover:font-semibold  px-3 text-black dark:text-white"
+                    onClick={() =>
+                      contactRef.current.scrollIntoView({ behavior: "smooth" })
+                    }
+                  >
                     {t("menu.2").toLocaleUpperCase()}
-                    </Link>
                   </button>
                 </li>
-          
               </ul>
-            
-              <button
-              onClick={handleTheme}
-              className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white flex items-center justify-center m-7 rounded-full"
-            >
-              {theme === "light" ? <MoonIcon /> : <SunIcon color={"white"} />}
-            </button>
 
+              <button
+                onClick={handleTheme}
+                className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white flex items-center justify-center m-7 rounded-full"
+              >
+                {theme === "light" ? <MoonIcon /> : <SunIcon color={"white"} />}
+              </button>
             </div>
           </div>
         )}

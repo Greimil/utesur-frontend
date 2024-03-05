@@ -4,12 +4,15 @@ import tableShot from "../assets/projectsIMG/tableShot.png";
 import yumyumyesShot from "../assets/projectsIMG/yumyumyesShot.png";
 import yumyumyesShot16 from "../assets/projectsIMG/yumyumyesShot16-9.png";
 import { useTranslation } from "react-i18next";
+import { forwardRef } from "react";
 
-export const WorkSection = () => {
+export const WorkSection = forwardRef((props, ref) => {
   const { t } = useTranslation();
+
   return (
     <Section
       title={t("work.title")}
+      id={ref}
       titleClass={"text-black dark:text-white text-[22px] my-3 font-bold"}
     >
       <div
@@ -18,10 +21,18 @@ export const WorkSection = () => {
         }
       >
         <div className="col-start-1   md:max-w-[300px]">
-          <Card src={ShadowShot} proName={t("work.projects.0")} link="https://devex.tools/shadows" />
+          <Card
+            src={ShadowShot}
+            proName={t("work.projects.0")}
+            link="https://devex.tools/shadows"
+          />
         </div>
         <div className="col-start-2   md:max-w-[300px]">
-          <Card src={tableShot} proName={t("work.projects.1")} link="https://devex.tools/tables" />
+          <Card
+            src={tableShot}
+            proName={t("work.projects.1")}
+            link="https://devex.tools/tables"
+          />
         </div>
 
         <div className="col-start-1 row-start-2 col-span-2 sm:col-span-1 sm:col-start-3 sm:row-start-1 ">
@@ -40,16 +51,22 @@ export const WorkSection = () => {
         </div>
       </div>
 
-      <div className="py-3"> 
-        <button className="bg-[#EDEDED] hover:scale-105 transition-all dark:bg-[#333333] w-full max-w-44 h-12 rounded-3xl dark:text-white font-bold " >{t("work.btn")}</button>
+      <div className="py-3">
+        <button className="bg-[#EDEDED] hover:scale-105 transition-all dark:bg-[#333333] w-full max-w-44 h-12 rounded-3xl dark:text-white font-bold">
+          {t("work.btn")}
+        </button>
       </div>
     </Section>
   );
-};
+});
+
+WorkSection.displayName = "WorkSection";
 
 const Card = ({ link, proName, src, className }) => {
   return (
-    <a href={link} target="_blank"
+    <a
+      href={link}
+      target="_blank"
       className={`hover:scale-105 transition-all duration-200 block ${className}`}
     >
       <img
@@ -67,7 +84,9 @@ const Card = ({ link, proName, src, className }) => {
 
 const CardLg = ({ link, proName, src, className }) => {
   return (
-    <button
+    <a
+      href={link}
+      target="_blank"
       className={`hover:scale-105 transition-all duration-200  w-full max-w-[600px]  ${className}`}
     >
       <img
@@ -79,6 +98,6 @@ const CardLg = ({ link, proName, src, className }) => {
       <div className=" block  dark:text-white  text-start my-3 font-medium text-base leading-6">
         {proName}
       </div>
-    </button>
+    </a>
   );
 };
