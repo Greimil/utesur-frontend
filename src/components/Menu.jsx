@@ -9,7 +9,6 @@ import i18n from "../i18n/i18n";
 export const Menu = ({
   theme,
   setTheme,
-  heroRef,
   workRef,
   aboutRef,
   contactRef,
