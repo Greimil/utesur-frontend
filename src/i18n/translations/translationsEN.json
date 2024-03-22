@@ -1,13 +1,13 @@
 {
   "menu": ["My Work", "About Me", "Contact"],
   "hero": {
-    "h1": "Hey there! Thanks for being here and being visitor number 12",
+    "h1": "Hey there! Thanks for being here, it's a pleasure to have you here",
     "p": "I'm Grey, a web developer. Would you like to work together?",
     "btn": "Let's talk about your project"
   },
   "work": {
     "title": "My Work",
-    "projects": ["Shadow Generator", "Table Generator", "YumYumYes"],
+    "projects": ["Shadow Generator", "Table Generator", "YumYumYes", "Pc Shop"],
     "btn": "See more Projects"
   },
   "about": {
@@ -28,5 +28,6 @@
     "placeholder4": "Your Message",
     "successMsg": "Thank you for your message, I will be contacting you as soon as possible!"
   },
-  "footer": "All rights reserved"
+  "footer": "All rights reserved", 
+  "chat": "Hello! I'm Grey's virtual assistant. You can ask me about him, and I'll respond based on my knowledge!"
 }

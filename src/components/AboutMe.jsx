@@ -27,7 +27,7 @@ export const AboutMe = forwardRef(({ theme }, ref) => {
   const { t } = useTranslation();
 
   return (
-    <Section id={ref} >
+    <Section id={ref}>
       <div
         id="aboutSection"
         className="flex justify-between flex-col md:flex-row gap-4 items-center"
@@ -40,7 +40,7 @@ export const AboutMe = forwardRef(({ theme }, ref) => {
               alt="profile Photo"
             />
           </div>
-          <span className>
+          <span >
             <strong className="mb-4 md:mb-2 block dark:text-white text-[18px] font-bold">
               GREIMIL NUÑEZ
             </strong>
@@ -80,9 +80,9 @@ export const AboutMe = forwardRef(({ theme }, ref) => {
       </div>
     </Section>
   );
-})
+});
 
-AboutMe.displayName = "AboutMe"
+AboutMe.displayName = "AboutMe";
 
 const Btn = ({ title, link }) => {
   return (

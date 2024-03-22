@@ -15,7 +15,7 @@ export const Footer = ({ theme }) => {
           <div className="size-[28px] bg-[#EDEDED] dark:bg-[#333333] mr-8 cursor-pointer  " onClick={()=> {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }} >
-            <ArrowUpIcon color={theme === "dark" && "white"} />
+            <ArrowUpIcon color={theme === "dark"? "white" : "black" } />
           </div>
 
           <div className="flex justify-center  gap-4 w-full  p-6">
@@ -24,21 +24,21 @@ export const Footer = ({ theme }) => {
               target="_blank"
               className="hover:scale-105 transition-all"
             >
-              <GithubIcon color={theme === "dark" && "white"} />
+              <GithubIcon color={theme === "dark"? "white" : "black" } />
             </a>{" "}
             <a
               href="https://www.linkedin.com/in/greimil-nu%C3%B1ez/"
               target="_blank"
               className="hover:scale-105 transition-all"
             >
-              <LinkedinIcon color={theme === "dark" && "white"} />{" "}
+              <LinkedinIcon color={theme === "dark"? "white" : "black" } />{" "}
             </a>
             <a
               href="https://twitter.com/Greimil1"
               target="_blank"
               className="hover:scale-105 transition-all"
             >
-              <TwitterIcon color={theme === "dark" && "white"} />{" "}
+              <TwitterIcon color={theme === "dark"? "white" : "black" } />{" "}
             </a>
           </div>
         </div>

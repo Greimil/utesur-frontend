@@ -6,7 +6,7 @@ export const ContactForm = () => {
   const { t } = useTranslation();
 
   if (state.succeeded) {
-    return <p className="dark:text-white text-base" >{t("contact.succesMsg")}</p>;
+    return <p className="dark:text-white text-base" >{t("contact.successMsg")}</p>;
   }
 
 

@@ -1,13 +1,13 @@
 {
   "menu": ["Mi trabajo", "Sobre mí", "Contacto"],
   "hero": {
-    "h1": "¡Hey hola! Gracias por estar aquí y ser el visitante número 12",
+    "h1": "¡Hey hola! Gracias por estar aquí y es un placer tenerte aquí",
     "p": "Soy Grey, desarrollador web. ¿Te gustaría trabajar juntos?",
     "btn": "Hablemos de tu proyecto"
   },
   "work": {
     "title": "Mi trabajo",
-    "projects": ["Generador de Sombras", "Generador de Tablas", "YumYumYes"],
+    "projects": ["Generador de Sombras", "Generador de Tablas", "YumYumYes", "Pc Componentes"],
     "btn": "Ver más trabajos"
   },
   "about": {
@@ -28,5 +28,7 @@
     "placeholder4": "Tu mensaje",
     "successMsg": "¡Gracias por tu mensaje, me pondré en contacto contigo tan pronto como sea posible!"
   },
-  "footer": "Todos los Derechos Reservados"
+  "footer": "Todos los Derechos Reservados", 
+  "chat": "¡Hola! Soy el asistente virtual de Grey. Estoy aquí para responder a tus preguntas sobre él utilizando mi amplio conocimiento y experiencia. ¡No dudes en preguntarme lo que quieras saber!"
+  
 }
