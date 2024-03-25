@@ -4,18 +4,21 @@ import { handleUserMessage } from "./chatFN";
 
 export const MessageInput = ({
   theme,
-  Thread_id,
+  Ids,
+  SetIds,
   messages,
   setChatMessages,
   setIsChatbotTyping,
+  
+  setStatus,
 }) => {
   const input = useRef(null);
 
   return (
-    <div className="absolute bottom-[37px] w-full bg-[#000000] dark:bg-[#222121] h-12 flex border">
+    <div className="absolute bottom-[55px] w-full bg-[#000000]  h-12 flex border-t">
       <input
         ref={input}
-        className="w-[80%] h-full px-2 outline-none"
+        className="w-[80%] h-full px-2 outline-none dark:bg-[#222121] dark:text-white"
         type="text"
         placeholder="Type Message here"
         onKeyDown={(e) => {
@@ -23,12 +26,15 @@ export const MessageInput = ({
             e.preventDefault();
 
             handleUserMessage(
-              Thread_id,
+              Ids,
+              SetIds,
               input.current.value,
               messages,
               setChatMessages,
-              setIsChatbotTyping
+              setIsChatbotTyping,
+              setStatus
             );
+
             e.target.value = "";
           }
         }}
@@ -37,21 +43,21 @@ export const MessageInput = ({
         onClick={() => {
           if (input.current.value !== "") {
             handleUserMessage(
-              Thread_id,
+              Ids,
+              SetIds,
               input.current.value,
               messages,
               setChatMessages,
-              setIsChatbotTyping
+              setIsChatbotTyping,
+              setStatus
             );
-
-
 
             input.current.value = "";
           }
         }}
-        className="flex justify-center items-center w-[20%] h-full"
+        className="flex justify-center items-center bg-black w-[20%] h-full"
       >
-        <SendIcon color={theme === "light" && "white"} />
+        <SendIcon color={"white" } />
       </button>
     </div>
   );

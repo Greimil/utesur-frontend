@@ -1,32 +1,41 @@
 import { FetchBot } from "./chatFN";
 import { useEffect } from "react";
-
 import { useState } from "react";
-
 import { ChatWindow } from "./ChatWindow";
+import { updateMsg } from "./chatFN";
+
 
 export function Chat({ theme }) {
-  const [Thread_id, setThread_id] = useState("");
+  const [Ids, SetIds] = useState({ Thread_id: "", Run_id: "" });
   const [isChatbotTyping, setIsChatbotTyping] = useState(false);
-  // content[0].text.value
+  const [status, setStatus] = useState(false);
+
   const [chatMessages, setChatMessages] = useState([
     {
-      content: [{text: ""}],
+      content: [{ text: "" }],
       role: "assistant",
     },
   ]);
 
   useEffect(() => {
-    FetchBot(chatMessages, setThread_id);
-  }, [chatMessages]);
+    FetchBot(chatMessages, SetIds);
+    if (status) {
+      console.log("estoy aqui dentro del useEffect")
+      updateMsg(Ids,chatMessages,setChatMessages,setStatus)
+    }
+
+  }, [chatMessages, status]);
 
   return (
     <ChatWindow
       theme={theme}
       messages={chatMessages}
+      status={status}
+      setStatus={setStatus}
       setIsChatbotTyping={setIsChatbotTyping}
       setChatMessages={setChatMessages}
-      Thread_id={Thread_id}
+      Ids={Ids}
+      SetIds={SetIds}
       isChatbotTyping={isChatbotTyping}
     />
   );
