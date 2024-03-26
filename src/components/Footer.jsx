@@ -22,6 +22,7 @@ export const Footer = ({ theme }) => {
             <a
               href="https://github.com/Greimil"
               target="_blank"
+              aria-label="GithubIcon"
               className="hover:scale-105 transition-all"
             >
               <GithubIcon color={theme === "dark"? "white" : "black" } />
@@ -30,6 +31,7 @@ export const Footer = ({ theme }) => {
               href="https://www.linkedin.com/in/greimil-nu%C3%B1ez/"
               target="_blank"
               className="hover:scale-105 transition-all"
+              aria-label="LinkedinIcon"
             >
               <LinkedinIcon color={theme === "dark"? "white" : "black" } />{" "}
             </a>
@@ -37,6 +39,7 @@ export const Footer = ({ theme }) => {
               href="https://twitter.com/Greimil1"
               target="_blank"
               className="hover:scale-105 transition-all"
+              aria-label="TwitterIcon"
             >
               <TwitterIcon color={theme === "dark"? "white" : "black" } />{" "}
             </a>

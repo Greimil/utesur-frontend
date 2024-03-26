@@ -78,7 +78,7 @@ export const Menu = ({
           <div className="flex gap-6">
             {/* Icono del menú */}
             <div className="md:hidden" ref={buttonRef}>
-              <button onClick={toggleMenu} className="focus:outline-none">
+              <button onClick={toggleMenu} className="focus:outline-none"  aria-label="Toggle Menu" >
                 <svg
                   className="size-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +104,8 @@ export const Menu = ({
               </button>
             </div>
 
-            <Link to="/" className="flex items-center text-[18px]">
-              <button className="p-1">
+            <Link to="/" href="/" className="flex items-center text-[18px]">
+              <button className="p-1"  aria-label="Home Button" >
                 <strong className="text-black dark:text-white">
                   {" "}
                   &lt;GreyDev/&gt;{" "}
@@ -116,6 +116,7 @@ export const Menu = ({
           {/* Enlaces para la versión de escritorio */}
           <div className="hidden md:flex items-center justify-end  flex-1     ">
             <button
+               aria-label="Navigate to Work Section"
               className="hover:font-semibold px-3 text-black dark:text-white"
               onClick={() =>
                 workRef.current.scrollIntoView({ behavior: "smooth" })
@@ -124,6 +125,7 @@ export const Menu = ({
               {t("menu.0").toLocaleUpperCase()}
             </button>
             <button
+             aria-label="Navigate to About Section"
               className="hover:font-semibold px-3 text-black dark:text-white"
               onClick={() =>
                 aboutRef.current.scrollIntoView({ behavior: "smooth" })
@@ -132,6 +134,7 @@ export const Menu = ({
               {t("menu.1").toLocaleUpperCase()}
             </button>
             <button
+             aria-label="Navigate To Contact Section"
               className="hover:font-semibold  px-3 text-black dark:text-white"
               onClick={() =>
                 contactRef.current.scrollIntoView({ behavior: "smooth" })
@@ -143,6 +146,8 @@ export const Menu = ({
 
           <div className="flex gap-x-2 ">
             <button
+            aria-label="Toggle language"
+             
               onClick={handleLanguageChange}
               className="size-10 bg-[#EDEDED] dark:bg-[#333333] text-black dark:text-white flex items-center justify-center rounded-full "
             >
@@ -153,6 +158,7 @@ export const Menu = ({
               )}
             </button>
             <button
+            aria-label="Toggle Theme"
               onClick={handleTheme}
               className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white md:flex items-center justify-center hidden rounded-full"
             >
@@ -170,6 +176,7 @@ export const Menu = ({
               <ul className="flex flex-1 flex-col   ">
                 <li className="hover:bg-primaryBlue `  font-semibold rounded-sm h-14 flex items-center px-7">
                   <button
+                  aria-label="Navigate To Work Section"
                     className="hover:font-semibold px-3 text-black dark:text-white"
                     onClick={() =>
                       workRef.current.scrollIntoView({ behavior: "smooth" })
@@ -180,6 +187,7 @@ export const Menu = ({
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
                   <button
+                  aria-label="Navigate to About Section"
                     className="hover:font-semibold px-3 text-black dark:text-white"
                     onClick={() =>
                       aboutRef.current.scrollIntoView({ behavior: "smooth" })
@@ -190,6 +198,7 @@ export const Menu = ({
                 </li>
                 <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
                   <button
+                    aria-label="Navigate To Contact Section"
                     className="hover:font-semibold  px-3 text-black dark:text-white"
                     onClick={() =>
                       contactRef.current.scrollIntoView({ behavior: "smooth" })
@@ -201,6 +210,7 @@ export const Menu = ({
               </ul>
 
               <button
+              aria-label="Toggle Theme"
                 onClick={handleTheme}
                 className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white flex items-center justify-center m-7 rounded-full"
               >

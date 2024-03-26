@@ -1,5 +1,5 @@
 import { Section } from "./wrappers/Section";
-import headShot from "../assets/headShot.png";
+import headShot from "../assets/headShot.webp";
 import { useTranslation } from "react-i18next";
 import DownloadIcon from "./icons/DownloadIcon";
 import cvEn from "../assets/CV/CV-EN.pdf";
@@ -60,17 +60,17 @@ export const AboutMe = forwardRef(({ theme }, ref) => {
           {<DownloadIcon color={theme === "light" ? "black" : "white"} />}
         </a>
       </div>
-      <h2 className="font-bold py-6 px-2 text-2xl dark:text-white">
+      <h3 className="font-bold py-6 px-2 text-2xl dark:text-white">
         {t("about.title")}
-      </h2>
+      </h3>
       <p className="dark:text-white leading-6 px-2 text-wrap  text-base">
         {t("about.p")}
       </p>
 
       <div>
-        <h2 className="font-bold py-6 px-2 text-2xl dark:text-white">
+        <h3 className="font-bold py-6 px-2 text-2xl dark:text-white">
           {t("about.tec.title")}
-        </h2>
+        </h3>
         <div className="flex justify-between gap-2 flex-wrap">
           {" "}
           {tec.map((current, idx) => {

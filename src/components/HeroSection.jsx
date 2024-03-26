@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import heroImg from "../assets/heroImg.png";
+import heroImg from "../assets/heroImg.webp";
 import { Section } from "./wrappers/Section";
 import { forwardRef } from "react";
 

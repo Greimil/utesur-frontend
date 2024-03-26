@@ -1,8 +1,8 @@
 import { Section } from "./wrappers/Section";
-import ShadowShot from "../assets/projectsIMG/shadowShot.png";
-import tableShot from "../assets/projectsIMG/tableShot.png";
-import yumyumyesShot from "../assets/projectsIMG/yumyumyesShot.png";
-import ShopShot from "../assets/projectsIMG/ShopShot.png";
+import ShadowShot from "../assets/projectsIMG/shadowShot.webp";
+import tableShot from "../assets/projectsIMG/tableShot.webp";
+import yumyumyesShot from "../assets/projectsIMG/yumyumyesShot.webp";
+import ShopShot from "../assets/projectsIMG/ShopShot.webp";
 import { useTranslation } from "react-i18next";
 import { forwardRef } from "react";
 import Carousel from "react-multi-carousel";
@@ -67,9 +67,12 @@ export const WorkSection = forwardRef((props, ref) => {
 
   return (
     <Section
-      title={t("work.title")}
       id={ref}
-      titleClass={"text-black dark:text-white text-[22px] my-3 font-bold"}
+      heading={
+        <h2 className="text-black dark:text-white text-[22px] my-3 font-bold">
+          {t("work.title")}
+        </h2>
+      }
     >
       <Carousel
         swipeable={true}
@@ -141,10 +144,11 @@ const Card = ({ link, proName, src, className }) => {
 
 const Dot = ({ active }) => {
   return (
-    <div
+    <button
+      aria-label="Next slide Button"
       className={`size-3 rounded-full ${
         active ? "bg-black dark:bg-white" : "bg-white dark:bg-black"
       } border mx-[3px] `}
-    ></div>
+    ></button>
   );
 };
