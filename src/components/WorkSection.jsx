@@ -69,7 +69,7 @@ export const WorkSection = forwardRef((props, ref) => {
     <Section
       id={ref}
       heading={
-        <h2 className="text-black dark:text-white text-[22px] my-3 font-bold">
+        <h2 className="text-black dark:text-white text-[22px] my-3 font-bold px-4 ">
           {t("work.title")}
         </h2>
       }
