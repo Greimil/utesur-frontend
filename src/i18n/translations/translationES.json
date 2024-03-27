@@ -1,7 +1,7 @@
 {
   "menu": ["Mi trabajo", "Sobre mí", "Contacto"],
   "hero": {
-    "h1": "¡Hey hola! Gracias por estar aquí y es un placer tenerte aquí",
+    "h1": "¡Hey hola! Gracias por estar aquí, es un placer tenerte aquí",
     "p": "Soy Grey, desarrollador web. ¿Te gustaría trabajar juntos?",
     "btn": "Hablemos de tu proyecto"
   },

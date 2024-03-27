@@ -1,7 +1,7 @@
 {
   "menu": ["My Work", "About Me", "Contact"],
   "hero": {
-    "h1": "Hey there! Thanks for being here, it's a pleasure to have you here",
+    "h1": "Hello! Thanks for being here. It's nice to have you!",
     "p": "I'm Grey, a web developer. Would you like to work together?",
     "btn": "Let's talk about your project"
   },
