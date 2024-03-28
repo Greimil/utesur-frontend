@@ -8,6 +8,7 @@ import { forwardRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
+import ArrowUpIcon from "./icons/ArrowUpIcon";
 
 const CustomDot = ({ onClick, ...rest }) => {
   const { t } = useTranslation();
@@ -19,17 +20,20 @@ const CustomDot = ({ onClick, ...rest }) => {
   } = rest;
   const carouselItems = [
     <Dot key={1} active={active} />,
-    <Dot key={1} active={active} />,
+    <Dot key={2} active={active} />,
+    <Dot key={3} active={active} />,
+    <Dot key={4} active={active} />
+    ,
   ];
   // onMove means if dragging or swiping in progress.
   // active is provided by this lib for checking if the item is active or not.
   return (
-    <button
+    <li
       className={active ? "active" : "inactive"}
       onClick={() => onClick()}
     >
       {React.Children.toArray(carouselItems)[index]}
-    </button>
+    </li>
   );
 };
 
@@ -84,9 +88,13 @@ export const WorkSection = forwardRef((props, ref) => {
         autoPlaySpeed={1000}
         keyBoardControl={true}
         removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style bg-red"
+        dotListClass=""
         itemClass="p-4 md:p-2 flex justify-center items-center  "
         customDot={<CustomDot />}
+        customRightArrow={<CustomArrow arrow="right" rotate={"rotate-90"} />}
+        customLeftArrow={
+          <CustomArrow arrow="left" rotate={"rotate-[-90deg]"} />
+        }
       >
         <Card
           src={ShadowShot}
@@ -144,11 +152,32 @@ const Card = ({ link, proName, src, className }) => {
 
 const Dot = ({ active }) => {
   return (
-    <button
+    <div
       aria-label="Next slide Button"
       className={`size-3 rounded-full ${
         active ? "bg-black dark:bg-white" : "bg-white dark:bg-black"
-      } border mx-[3px] `}
-    ></button>
+      } border border-black mx-[3px] `}
+    ></div>
+  );
+};
+
+const CustomArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType },
+    rotate,
+    arrow,
+  } = rest;
+
+  return (
+    <button
+      className={`size-[43px] ${
+        arrow === "right" ? "arrowRightPosition" : "arrowLeftPosition"
+      }  rounded-full hover:bg-[#00000080] bg-[#6d6d6d80] flex items-center justify-center  absolute right-[0] ${rotate}`}
+      onClick={() => onClick()}
+    >
+      {" "}
+      <ArrowUpIcon color={"white"} size={32} />{" "}
+    </button>
   );
 };

@@ -21,3 +21,10 @@
   height: 100svh;
 }
 
+.arrowRightPosition {
+  right: calc(4% + 1px);
+}
+
+.arrowLeftPosition{
+  left: calc(4% + 1px);
+}

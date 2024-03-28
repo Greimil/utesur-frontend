@@ -1,9 +1,9 @@
 
-const ArrowUpIcon = ({color}) => (
+const ArrowUpIcon = ({color, size = 28}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={28}
-    height={28}
+    width={size}
+    height={size}
     viewBox="0 -960 960 960"
     style={{transition: "none"}}
     fill={color}

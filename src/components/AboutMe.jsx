@@ -75,12 +75,12 @@ AboutMe.displayName = "AboutMe";
 
 const Btn = ({ title, link }) => {
   return (
-    <div
+    <a
       href={link}
       target="_blank"
       className="bg-[#EDEDED] transition-all dark:bg-[#333333] hover:scale-105 w-[48%]  md:w-full  sm:max-w-28 h-12 px-3 rounded-3xl cursor-pointer dark:text-white font-semibold flex items-center justify-center gap-1"
     >
       {title}
-    </div>
+    </a>
   );
 };
