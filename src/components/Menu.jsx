@@ -164,7 +164,7 @@ export const Menu = ({
             <button
             aria-label="Toggle Theme"
               onClick={handleTheme}
-              className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white md:flex items-center justify-center hidden rounded-full"
+              className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white flex items-center justify-center  rounded-full"
             >
               {theme === "light" ? <MoonIcon /> : <SunIcon color={"white"} />}
             </button>
