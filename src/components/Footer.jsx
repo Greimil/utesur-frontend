@@ -12,7 +12,7 @@ export const Footer = ({ theme }) => {
     <footer className=" border-t border-[#E5E8EB] w-full text-base mt-[47px]">
       <div className="flex flex-col h-full w-full items-center p-4 relative">
         <div className="socialLinks flex flex-row-reverse items-center justify-around  w-full  ">
-          <div className="size-[28px] bg-[#EDEDED] dark:bg-[#333333] mr-8 cursor-pointer  " onClick={()=> {
+          <div className="size-[28px] bg-[#EDEDED] dark:bg-[#333333] mr-8 cursor-pointer rounded-3xl " onClick={()=> {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }} >
             <ArrowUpIcon color={theme === "dark"? "white" : "black" } />

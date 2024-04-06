@@ -59,7 +59,7 @@ export const AboutMe = forwardRef(({ theme }, ref) => {
 
       <div>
         <h3 className="font-bold py-6 px-2 text-2xl dark:text-white">{t("about.tec.title")}</h3>
-        <div className="flex justify-between gap-2 flex-wrap">
+        <div className="flex lg:justify-between gap-2 flex-wrap">
           {tec.map((current, idx) => {
             return <Btn title={current.title} link={current.link} key={idx} />;
           })}

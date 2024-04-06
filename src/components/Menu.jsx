@@ -92,12 +92,16 @@ export const Menu = ({
                       fillRule="evenodd"
                       clipRule="evenodd"
                       d="M15 11H5v-2h10v2zM3 5h14V7H3V5zm2 6h10v2H5v-2z"
+                      height={14}
+                      width={14}
                     />
                   ) : (
                     <path
                       fillRule="evenodd"
                       clipRule="evenodd"
                       d="M4 6h12v2H4V6zm0 5h12v2H4v-2zm0 5h12v2H4v-2z"
+                      height={14}
+                      width={14}
                     />
                   )}
                 </svg>
@@ -168,13 +172,13 @@ export const Menu = ({
         </div>
 
         {menuOpen && (
-          <div className="lg:hidden fixed inset-0 bg-gray-900 bg-opacity-75 z-[100000]">
+          <div className="lg:hidden fixed inset-0 bg-gray-900  bg-opacity-75 z-[100000]">
             <div
               ref={menuRef}
-              className="absolute flex flex-col top-0 left-0-0 h-full w-64 bg-white dark:bg-[#222121] shadow"
+              className="absolute flex flex-col bottom-0 left-0-0 h-52 w-full bg-white dark:bg-[#222121] shadow"
             >
-              <ul className="flex flex-1 flex-col   ">
-                <li className="hover:bg-primaryBlue `  font-semibold rounded-sm h-14 flex items-center px-7">
+              <ul className="flex flex-1 flex-col justify-center   ">
+                <li className="hover:bg-primaryBlue `  font-semibold rounded-sm h-14 flex items-center justify-center px-7">
                   <button
                   aria-label="Navigate To Work Section"
                     className="hover:font-semibold px-3 text-black dark:text-white"
@@ -185,7 +189,7 @@ export const Menu = ({
                     {t("menu.0").toLocaleUpperCase()}
                   </button>
                 </li>
-                <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
+                <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center justify-center px-7 ">
                   <button
                   aria-label="Navigate to About Section"
                     className="hover:font-semibold px-3 text-black dark:text-white"
@@ -196,7 +200,7 @@ export const Menu = ({
                     {t("menu.1").toLocaleUpperCase()}
                   </button>
                 </li>
-                <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center px-7 ">
+                <li className="hover:bg-primaryBlue  font-semibold h-14 flex items-center justify-center px-7 ">
                   <button
                     aria-label="Navigate To Contact Section"
                     className="hover:font-semibold  px-3 text-black dark:text-white"
@@ -209,13 +213,13 @@ export const Menu = ({
                 </li>
               </ul>
 
-              <button
+              {/* <button
               aria-label="Toggle Theme"
                 onClick={handleTheme}
                 className=" size-10 bg-[#EDEDED] dark:bg-[#333333] dark:text-white flex items-center justify-center m-7 rounded-full"
               >
                 {theme === "light" ? <MoonIcon /> : <SunIcon color={"white"} />}
-              </button>
+              </button> */}
             </div>
           </div>
         )}
