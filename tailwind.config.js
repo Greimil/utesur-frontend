@@ -8,6 +8,11 @@ export default {
     extend: {
       fontFamily:{
         abc: ["Plus Jakarta Sans", "sans-serif"]
+      }, 
+      colors: {
+        primary: "#01498C",
+        accent: "#FC6008", 
+        primaryText: "#2E73B2"
       }
     },
   },

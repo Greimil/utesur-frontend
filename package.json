@@ -13,6 +13,7 @@
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@formspree/react": "^2.5.1",
+    "@headlessui/react": "^1.7.19",
     "axios": "^1.6.7",
     "dotenv": "^16.4.5",
     "form-data": "^4.0.0",
@@ -24,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.5",
     "react-multi-carousel": "^2.8.4",
+    "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
