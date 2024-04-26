@@ -107,32 +107,43 @@ export const HeroSection = forwardRef(({ contactRef }, ref) => {
               >
                 <Card
                   img={informatica}
-                  carrera={"Licenciatura"}
+                  carrera={"informatica"}
                   textoDes={"Conoce mas detalles"}
                 />
                 <Card
                   img={Psicologia}
-                  carrera={"Licenciatura"}
+                  carrera={"psicologia-general"}
+                  textoDes={"Conoce mas detalles"}
+                />
+                <Card
+                  img={Psicologia}
+                  carrera={"psicologia-escolar"}
                   textoDes={"Conoce mas detalles"}
                 />
                 <Card
                   img={Contabilidad}
-                  carrera={"Licenciatura"}
+                  carrera={"contabilidad"}
                   textoDes={"Conoce mas detalles"}
                 />
                 <Card
                   img={Educacion}
-                  carrera={"Licenciatura"}
+                  carrera={"educacion-inicial"}
                   textoDes={"Conoce mas detalles"}
                 />
                 <Card
+                  img={Educacion}
+                  carrera={"educacion-primaria"}
+                  textoDes={"Conoce mas detalles"}
+                />
+
+                <Card
                   img={Enfermeria}
-                  carrera={"Licenciatura"}
+                  carrera={"enfermeria"}
                   textoDes={"Conoce mas detalles"}
                 />
                 <Card
                   img={Agronomia}
-                  carrera={"Ingeniería"}
+                  carrera={"agronomia"}
                   textoDes={"Conoce mas detalles"}
                 />
               </Carousel>

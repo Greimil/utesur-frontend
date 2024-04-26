@@ -5,7 +5,6 @@ import { AccordionContact } from './../components/Contacto/components/accordionC
 export const Contacto = () => {
   return (
     <Section>
-
         <HeroSectionContact/>
         <AccordionContact/>
 

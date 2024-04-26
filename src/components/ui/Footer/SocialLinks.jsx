@@ -5,7 +5,7 @@ import YTlogo from "../../../assets/Footer/youtube.png";
 
 export const SocialLinks = () => {
   return (
-    <div className=" flex  justify-center gap-x-4 md:justify-between lg:max-h-[250px] col-span-full py-3  ">
+    <div className=" flex  justify-center gap-x-8 md:justify-between lg:max-h-[250px] col-span-full py-3  ">
      
       <Link to="https://www.facebook.com/profile.php?id=100078139876813" className="[font-size:_clamp(10px,2vw,16px)] flex gap-x-2 ">
         <img  src={FBlogo}  alt="Facebook Logo" className="w-6" />{" "}

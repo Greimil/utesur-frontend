@@ -9,7 +9,7 @@ import { Admisiones } from "./pages/Admisiones";
 import { Header } from "./components/ui/Header/Header";
 import { PortalWeb } from "./pages/PortalWeb";
 import { Contacto } from "./pages/Contacto";
-
+import {Carrera} from "./pages/Carrera"
 import {  Routes, Route  } from "react-router-dom";
 
 const App = () => {
@@ -24,6 +24,7 @@ const App = () => {
           <Route path="/admisiones" element={<Admisiones/>} />
           <Route path="/portal" element={<PortalWeb/>} />
           <Route path="/contactos" element={<Contacto/> }/>
+          <Route path="/carreras/:carreraId" element={<Carrera/>} />
         </Routes>
       </Container>
       <Footer />

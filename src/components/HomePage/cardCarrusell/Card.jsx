@@ -1,16 +1,16 @@
+import { Link } from "react-router-dom"
 
-
-export const Card = ({img,alt, carrera, textoDes, type = "academic" }) => {
+export const Card = ({img,alt, carrera, textoDes, type = "licenciatura" }) => {
   return (
-    <a className="flex flex-col cursor-pointer" >
+    <Link to={`/carreras/${carrera}`}  className="flex flex-col cursor-pointer" >
       
       <div>
         <img className="max-w-[300px] aspect-video rounded-2xl" src={img} alt={alt} />
       </div>
 
-    <p className="my-1"> {carrera} </p>
+    <p className="my-1"> {type} </p>
     <span className="text-primaryText" >{textoDes}</span>
-    </a>
+    </Link>
   )
 }
 

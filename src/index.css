@@ -28,3 +28,7 @@
 .arrowLeftPosition{
   left: calc(4% + 1px);
 }
+
+.carreras {
+  background: url("/src/assets/Carreras/CarrerasBanner.png");
+}
