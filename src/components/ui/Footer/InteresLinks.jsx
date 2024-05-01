@@ -9,25 +9,25 @@ export const InteresLinks = () => {
 
       <Link
         to="/portal-servicios"
-        className="[font-size:_clamp(10px,2vw,14px)] block  hover:text-white"
+        className="text-[14px] block  hover:text-white"
       >
         Portal de Servicios
       </Link>
 
-      <Link className="[font-size:_clamp(10px,2vw,14px)] block hover:text-white ">
+      <Link className="text-[14px] block hover:text-white ">
         Oferta Académica
       </Link>
-      <Link className="[font-size:_clamp(10px,2vw,14px)] block  hover:text-white">
+      <Link className="text-[14px] block  hover:text-white">
         UTESUR virtual
       </Link>
 
       <Link
         to="/admisiones"
-        className="[font-size:_clamp(10px,2vw,14px)] block  hover:text-white"
+        className="text-[14px] block  hover:text-white"
       >
         Admisiones
       </Link>
-      <Link className="[font-size:_clamp(10px,2vw,14px)] block  hover:text-white">
+      <Link className="text-[14px] block  hover:text-white">
         Biblioteca
       </Link>
     </div>

@@ -6,19 +6,19 @@ export const AboutFooter = () => {
       <h2 className="[font-size:_clamp(16px,2vw,18px)] font-bold  text-white">
         Nosotros
       </h2>
-      <Link className=" block [font-size:_clamp(12px,2vw,14px)]  hover:border-primaryOrange hover:text-white md:py-1 ">
+      <Link className=" block text-[14px]  hover:border-primaryOrange hover:text-white md:py-1 ">
         Quienes somos
       </Link>
-      <Link className="block [font-size:_clamp(12px,2vw,14px)] hover:border-primaryOrange hover:text-white md:py-1">
+      <Link className="block text-[14px] hover:border-primaryOrange hover:text-white md:py-1">
         Historia de la UTESUR
       </Link>
-      <Link className="[font-size:_clamp(12px,2vw,14px)] block hover:border-primaryOrange hover:text-white md:py-1">
+      <Link className="text-[14px] block hover:border-primaryOrange hover:text-white md:py-1">
         Datos fundamentales
       </Link>
-      <Link className="[font-size:_clamp(12px,2vw,14px)] block hover:border-primaryOrange hover:text-white md:py-1">
+      <Link className="text-[14px] block hover:border-primaryOrange hover:text-white md:py-1">
         Misión de la UTESUR
       </Link>
-      <Link className="[font-size:_clamp(12px,2vw,14px)] block hover:border-primaryOrange hover:text-white md:py-1">
+      <Link className="text-[14px] block hover:border-primaryOrange hover:text-white md:py-1">
         Vision de la UTESUR
       </Link>
     </div>

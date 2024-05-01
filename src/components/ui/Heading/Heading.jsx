@@ -7,7 +7,7 @@ export const Heading = ({ type, text, className, bold }) => {
   if (type === "h1") {
     return (
       <h1
-        className={`${className} [font-size:_clamp(20px,2vw,32px)] ${textBold} `}
+        className={`${className} [font-size:_clamp(20px,2vw,32px)] leading-9 ${textBold} `}
       >
         {text}
       </h1>

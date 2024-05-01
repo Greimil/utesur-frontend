@@ -13,7 +13,7 @@ export const Noticias = () => {
       <a className="text-sm font-medium hover:scale-105 transition-all hover:font-bold cursor-pointer"  >Ver otras noticias</a>
       </div>
 
-      <div className="mt-7 flex justify-center gap-3 flex-wrap">
+      <div className="mt-7 flex justify-between gap-3 flex-wrap">
         <Card
           img={noti1}
           carrera={"Lorem ipsum dolor sit amet"}

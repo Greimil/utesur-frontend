@@ -1,10 +1,10 @@
-
 import { Section } from "../../ui/wrappers/Section";
 import { forwardRef } from "react";
 import banner from "../../../assets/banner.png";
 import { Tab } from "@headlessui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ArrowUpIcon from "../../ui/Icons/ArrowUpIcon";
 import { Card } from "../cardCarrusell/Card";
 import informatica from "../../../assets/Carreras/informatica.png";
 import Psicologia from "../../../assets/Carreras/Psicologia.png";
@@ -41,7 +41,7 @@ export const HeroSection = forwardRef(({ contactRef }, ref) => {
         className=" flex-col  md:flex-row items-center gap-3 0 "
       >
         <div>
-          <img src={banner} alt="" className="px-4 py-3" />
+          <img src={banner} alt="" className="px-4 py-3 w-full" />
         </div>
 
         <div>
@@ -58,9 +58,7 @@ export const HeroSection = forwardRef(({ contactRef }, ref) => {
 
         <Tab.Group>
           <Tab.List
-            className={
-              "my-8 flex  gap-x-8 text-sm font-abc border-b  py-4"
-            }
+            className={"my-8 flex  gap-x-8 text-sm font-abc border-b  py-4"}
           >
             <Tab>
               {({ selected }) => (
@@ -104,6 +102,12 @@ export const HeroSection = forwardRef(({ contactRef }, ref) => {
                 partialVisbile={false}
                 itemClass="mx-4"
                 responsive={responsive}
+                customRightArrow={
+                  <CustomArrow arrow="right" rotate={"rotate-90"} />
+                }
+                customLeftArrow={
+                  <CustomArrow arrow="left" rotate={"rotate-[-90deg]"} />
+                }
               >
                 <Card
                   img={informatica}
@@ -158,3 +162,24 @@ export const HeroSection = forwardRef(({ contactRef }, ref) => {
 });
 
 HeroSection.displayName = "HeroSection";
+
+const CustomArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType },
+    rotate,
+    arrow,
+  } = rest;
+
+  return (
+    <button
+      className={`size-[43px] ${
+        arrow === "right" ? "arrowRightPosition" : "arrowLeftPosition"
+      }  rounded-full hover:bg-[#00000080] bg-[#6d6d6d80] flex items-center justify-center  absolute right-[0] ${rotate}`}
+      onClick={() => onClick()}
+    >
+      {" "}
+      <ArrowUpIcon color={"white"} size={32} />{" "}
+    </button>
+  );
+};

@@ -25,7 +25,7 @@ export const Accordion = ({
     >
       {visibleTheme ? (
         <h2
-          className={`accordion-theme [font-size:_clamp(20px,2vw,32px)] font-semibold my-6  ${
+          className={`accordion-theme text-primary [font-size:_clamp(20px,2vw,32px)] font-semibold my-6  ${
             activeTheme === theme ? "active   " : ""
           }`}
           

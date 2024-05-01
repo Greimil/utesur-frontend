@@ -1,10 +1,10 @@
 // import { Heading } from "@/features/ui";
 import { Link } from "react-router-dom";
-import { Admisiones } from './../../../../pages/Admisiones';
+import { Admisiones } from "./../../../../pages/Admisiones";
 export const InfoSectionAdm = () => {
   return (
     <section className=" ">
-      <div className="py-3" >
+      <div className="py-3">
         <h1 className="text-[36px] font-bold text-primary mb-4 ">
           Como Inscribirse
         </h1>
@@ -16,9 +16,19 @@ export const InfoSectionAdm = () => {
             title={"Tomar la prueba Poma"}
           />
 
-          <CardSteps num={"2"} title={"Llenar Formulario de admisión"} description={"Completa el formulario de inscripción e imprime"} />
+          <CardSteps
+            num={"2"}
+            title={"Llenar Formulario de admisión"}
+            description={"Completa el formulario de inscripción e imprime"}
+          />
 
-          <CardSteps num={"3"} title={"Depositar los documentos"} description={"Depositar los documentos en departamento de Admisiones"} />
+          <CardSteps
+            num={"3"}
+            title={"Depositar los documentos"}
+            description={
+              "Depositar los documentos en departamento de Admisiones"
+            }
+          />
         </div>
       </div>
 
@@ -44,6 +54,7 @@ export const InfoSectionAdm = () => {
           <Li
             text={"Formulario de inscripción"}
             text2={"Puedes llenarlo haciendo click aquí"}
+            link="https://uxxi.utesur.edu.do/ac_app/f?p=400800:9000"
           />
           <Li text={"Acta de nacimiento"} text2={"Certificada y legalizada"} />
           <Li
@@ -98,12 +109,16 @@ export const InfoSectionAdm = () => {
   );
 };
 
-const Li = ({ text, text2 }) => {
+const Li = ({ text, text2, link = "" }) => {
   return (
-    <li className="min-h-[62px] py-4 border-y flex items-center gap-x-7 justify-a">
+    <li className="min-h-[62px] py-4 border-y flex items-center gap-x-7 ">
       {" "}
       <p className="w-2/4 max-w-40">{text}</p>{" "}
-      <span className="font-bold w-1/4">{text2}</span>{" "}
+      {link === "" ? (
+        <span className="font-bold w-1/4">{text2}</span>
+      ) : (
+        <a href={link} target="_blank" className="font-bold w-1/4" >{text2}</a>
+      )}
     </li>
   );
 };
@@ -112,14 +127,17 @@ const CardSteps = ({ num, title, description, link }) => {
   return (
     <a href={link} className="flex w-full flex-col gap-y-2 p-4  ">
       <div className="flex jus ">
-        <div className="bg-primary flex justify-center items-center rounded-full p-1  " >
+        <div className="bg-primary flex justify-center items-center rounded-full p-1  ">
           <div className="size-8 border-2 bg-primary p-5  rounded-full  flex justify-center items-center">
             <strong className="text-white text-lg">{num}</strong>{" "}
           </div>
         </div>
       </div>
 
-      <strong className="font-bold [font-size:_clamp(10px,2vw,16px)] text-p"> {title} </strong>
+      <strong className="font-bold [font-size:_clamp(10px,2vw,16px)] text-p">
+        {" "}
+        {title}{" "}
+      </strong>
 
       <p className="text-primaryText hidden md:block">{description}</p>
     </a>

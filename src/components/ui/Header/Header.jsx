@@ -72,15 +72,17 @@ export const Header = () => {
           {/* Enlaces para la versión de escritorio */}
           <div className="hidden lg:flex items-center  font-semibold   ">
           <span>
+              <Link to="/nosotros"  className="text-white border-r px-3">
+                Nosotros
+              </Link>
+            </span>
+          
+          <span>
               <Link to="/contactos" className="text-white border-r px-3">
                 Contactos
               </Link>
             </span>
-            <span>
-              <Link to="https://login.live.com/" target="_blank" className="text-white border-r px-3">
-                Correo Institucional
-              </Link>
-            </span>
+            
             <span className="border-r px-3 ">
               <Link to="/admisiones" className="text-white  ">
                 Admisiones
@@ -176,14 +178,14 @@ export const Header = () => {
             </span>
             
             <span>
-              <Link to="/productos" className="text-[#46484A]  pr-3">
+              <Link to="/preguntas-frecuentes" className="text-[#46484A]  pr-3">
                 Preguntas Frecuentes
               </Link>
             </span>
             
             <span>
-              <Link to="/calendarios" className="text-[#46484A]  pr-3">
-                Calendario Cuatrimestral
+              <Link to="https://login.live.com/" className="text-[#46484A]  pr-3">
+                Correo Institucional
               </Link>
             </span>
             {/* Agrega más elementos del menú según tu aplicación */}

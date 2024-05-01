@@ -84,7 +84,7 @@ export const HeroSectionCarreras = ({
 
   return (
     <div>
-      <div className="container carreras  w-full aspect-video  md:max-h-[480px] rounded-2xl text-white px-4 md:px-14 relative">
+      <div className="container carreras   w-full aspect-video  md:max-h-[480px] rounded-2xl text-white px-4 md:px-14 relative">
         <div className="flex flex-col justify-center gap-4 h-full md:absolute top-12 ">
           <h1 className="font-bold text-2xl md:text-4xl">
             Licenciatura en {carrera.split("-")}{" "}
@@ -99,9 +99,9 @@ export const HeroSectionCarreras = ({
             >
               Descargar programa
             </a>
-            <button className="bg-white flex justify-center items-center text-[12px] md:text-sm  px-3 md:px-6 py-3  md:py-4 text-black font-bold rounded-full hover:scale-105 transition-all">
+            <a target="_blank" href="https://uxxi.utesur.edu.do/ac_app/f?p=400800:9000" className="bg-white flex justify-center items-center text-[12px] md:text-sm  px-3 md:px-6 py-3  md:py-4 text-black font-bold rounded-full hover:scale-105 transition-all">
               Aplicar Ahora
-            </button>
+            </a>
           </div>
         </div>
       </div>
